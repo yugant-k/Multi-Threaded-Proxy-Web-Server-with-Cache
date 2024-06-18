@@ -20,10 +20,10 @@ with help of socket programming in C
 
 Implementation: 
 How to make connections? With help of sockets 
-Proxy server:- Create a socket and bind it to a specific port number (on our machine) so this socket will "listen" and "accept" connection request from clients 
-Client server:- Just Create a socket for client  (done by proxy server while accepting request) and send request to proxy server 
+- Proxy server:- Create a socket and bind it to a specific port number (on our machine) so this socket will "listen" and "accept" connection request from clients 
+- Client server:- Just Create a socket for client  (done by proxy server while accepting request) and send request to proxy server 
 So proxy server and client will exchange data with sockets 
-Remote server:- proxy will communicate with remote server also with help of socket
+- Remote server:- proxy will communicate with remote server also with help of socket
 
 Now onto the main part! 
 
@@ -44,3 +44,5 @@ So implemted add() remove() functions of LRU cache
 
 Issue 4: Concurrent requests to shared resources!
 Cache and Queue are shared resources so we may run into RACE Condition as we have multiple threads. So to avoid that we use mutex locks, semaphore and conditions variables whenever shared resources are used.
+
+![image](https://github.com/yugant-k/Multi-Threaded-Proxy-Web-Server-with-Cache/assets/173158288/88a15d83-41b5-4176-86cc-6c64120dd415)
