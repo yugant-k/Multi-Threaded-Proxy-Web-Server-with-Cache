@@ -1,4 +1,4 @@
-# Multi-Threaded-Proxy-Web-Server-with-Cache
+![image](https://github.com/yugant-k/Multi-Threaded-Proxy-Web-Server-with-Cache/assets/173158288/5fba111c-5e74-44b6-ae1e-e5a6d7dfa964)# Multi-Threaded-Proxy-Web-Server-with-Cache
 
 This project is implemented using C and Parsing of HTTP 
 
@@ -29,20 +29,20 @@ Now onto the main part!
 
  
 Sounds simple? But what if multiple client sends request at same time? 
-Issue 1: Can only handle 1 request at a time?
+- Issue 1: Can only handle 1 request at a time?
 To solve this problem we use multihreading model in C. Each connection request made to client is given a thread for execution by the proxy server. Thus in this way our server can resolve multiple requests at a time. 
 
-Issue 2: No of requests=No of threads?
+- Issue 2: No of requests=No of threads?
 But in this way we will keep making unlimited threads which isn't good? So we limit max no of clients and We resolve this my implementing THREADPOOLs instead by creating an array (of threads) with size=MAX no of clients.
 This is supported by queue data structure which stores the client requests.
 Thus our threadpool will keep checking for any client request in the queue. 
 
 
-Issue 3: unnecessary requests to remote server? 
+- Issue 3: unnecessary requests to remote server? 
 Many a times we can get frequent same requests so we create a LRU cache with help of Linked List data structure . We store the timestamp of the request to decide which request should be removed if cache size exceeds a certain limit. 
 So implemted add() remove() functions of LRU cache 
 
-Issue 4: Concurrent requests to shared resources!
+- Issue 4: Concurrent requests to shared resources!
 Cache and Queue are shared resources so we may run into RACE Condition as we have multiple threads. So to avoid that we use mutex locks, semaphore and conditions variables whenever shared resources are used.
 
 ![image](https://github.com/yugant-k/Multi-Threaded-Proxy-Web-Server-with-Cache/assets/173158288/88a15d83-41b5-4176-86cc-6c64120dd415)
