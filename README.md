@@ -1,4 +1,4 @@
-![image](https://github.com/yugant-k/Multi-Threaded-Proxy-Web-Server-with-Cache/assets/173158288/5fba111c-5e74-44b6-ae1e-e5a6d7dfa964)# Multi-Threaded-Proxy-Web-Server-with-Cache
+# Multi-Threaded-Proxy-Web-Server-with-Cache
 
 This project is implemented using C and Parsing of HTTP 
 
